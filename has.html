@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    
+        <style>
+            div{
+                width: 60%;
+                margin: 0 auto;
+                border: 2px solid black;
+                text-align: center;
+                font-size: 2rem;
+                /* padding: 50px 100px; */
+                transition: all 1s ease-in-out;
+            }
+            button{
+                font-size: 2rem;
+            }
+            .padding{
+                padding: 50px 100px;
+            }
+            .bg{
+                background-color: red;
+            }
+        </style>
+</head>
+<body>
+    <section>
+        <div>
+            <h1>JQery</h1>
+            <p>jQuery is a JavaScript Library.
+
+                jQuery greatly simplifies JavaScript programming.
+
+                jQuery is easy to learn.</p>
+            <p>jQuery is a lightweight, "write less, do more", JavaScript library.
+
+                The purpose of jQuery is to make it much easier to use JavaScript on your website.
+
+                jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps
+                them into methods that you can call with a single line of code.
+
+                jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM
+                manipulation.
+
+                The jQuery library contains the following features:
+
+                HTML/DOM manipulation
+                CSS manipulation
+                HTML event methods
+                Effects and animations
+                AJAX
+                Utilities</p>
+                <button class="add">Has Class</button>
+                <button class="after">Add after</button>
+                <button class="before">Add Before</button>
+        </div>
+    </section>
+
+
+    <script>
+        $(document).ready(() => {
+            $(".add").click(() => {
+                console.log($("div").hasClass("bg"))
+                if($("div").hasClass("bg")){
+                    $("div").removeClass("bg padding")
+                }
+                else{
+                    $("div").addClass("bg padding")
+                }
+            })
+
+            $(".after").dblclick(() => {
+                $("div").after("<h2>Added After</h2>")
+                $("div").append("<h3>Append After</h3>")
+            })
+            $(".before").one("click",(() => {
+                $("div").before("<h2>Added After</h2>")
+                $("div").prepend("<h3>Prepend Before</h3>")
+            }))
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Assignment </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #14213d;
+            color: white;
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ol {
+            margin: 40px 0;
+        }
+
+        li {
+            font-size: 2rem;
+            text-align: justify;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #fca311;
+            position: relative;
+        }
+
+        .code {
+            width: 45%;
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px auto;
+            list-style: none;
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 1.5rem;
+            list-style: none;
+        }
+
+        .example {
+            text-align: center;
+            list-style: none;
+        }
+
+        .example button {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: #fca311;
+            color: #14213d;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .classadding {
+            color: #fca311;
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            transition: all 0.2ms ease-in-out;
+        }
+
+        .slider div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .slider div img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>JQuery Assignment</h1>
+    </div>
+    <section>
+        <ol type="1">
+            <li>What is jQuery?</li>
+        </ol>
+        <ul>
+            <li>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document
+                traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API
+                that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery
+                has changed the way that millions of people write JavaScript.</li>
+        </ul>
+    </section>
+
+    <section>
+        <ol type="1" start="2">
+            <li>How to Apply CSS Using JQuery, How to Add Class and Remove Class in Jquery , JQuery Animation?</li>
+        </ol>
+        <ul>
+            <li type="square">Applying CSS Using jQuery</li>
+            <li class="caption">
+                <h4>Code</h4>
+            </li>
+            <li class="code">
+                <div>
+                    &lt;script&gt;
+                    $("div").on("click", function () {
+                    var color = $(this).css("background-color");
+                    $("#result").html("That div is &gt;span style='color:" +
+                    color + ";'&lt;" + color + "&gt;/span&lt;.");
+                    });
+                    &lt;/script&gt;
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li type="square">Add Class and Remove Class in Jquery</li>
+            <li class="caption">
+                <h4>Code</h4>
+            </li>
+            <li class="code">
+                <div>
+                    &lt;script&gt;
+                    $("AddClass").on("click", function () {
+                    $("#class").addClass("classadding")
+                    })
+                    &lt;/script&gt;
+                </div>
+            </li>
+            <li class="code">
+                <div>
+                    &lt;script&gt;
+                    $("AddClass").on("click", function () {
+                    $("#class").removeClass("classadding")
+                    })
+                    &lt;/script&gt;
+                </div>
+            </li>
+            <li class="example">Example</li>
+            <li class="example"><button id="AddClass">Add Class</button></li>
+            <li class="example"><button id="RemoveClass">Remove Class</button></li>
+            </li>
+            <ul>
+                <li type="square">JQuery Animation?</li>
+                <li class="caption">
+                    <h4>Code</h4>
+                </li>
+                <li class="code">
+                    <div>
+                        &lt;script&gt;
+                        $("button").click(function () {
+                        $("div").animate({
+                        left: '250px',
+                        opacity: '0.5',
+                        height: '150px',
+                        width: '150px'
+                        });
+                        });
+                        &lt;/script&gt;
+                    </div>
+                </li>
+                <li class="example">Example</li>
+                <li class="example">
+                    <div class="box"></div>
+                </li>
+                <li class="example"><button id="animation">Start Animation</button></li>
+            </ul>
+    </section>
+
+    <section>
+        <ol type="1" start="3">
+            <li>How to create slider with animation ?</li>
+        </ol>
+        <ul>
+            <li class="code">
+                <div class="slider">
+                    <div class="slider-images"><img
+                            src="https://images.pexels.com/photos/19985060/pexels-photo-19985060/free-photo-of-the-castaway.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt=""></div>
+                    <div class="slider-images"><img
+                            src="https://images.pexels.com/photos/19787758/pexels-photo-19787758/free-photo-of-fallen-leaves-on-road-in-park.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt=""></div>
+                    <div class="slider-images"><img
+                            src="https://images.pexels.com/photos/19792518/pexels-photo-19792518/free-photo-of-a-view-of-the-ocean-from-a-hilltop.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt=""></div>
+                    <div class="slider-images"><img
+                            src="https://images.pexels.com/photos/14305998/pexels-photo-14305998.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt=""></div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $('body').ready(function () {
+            $('#AddClass').on('click', function () {
+                $('.code').addClass('classadding')
+            })
+            $('#RemoveClass').on('click', function () {
+                $('.code').removeClass('classadding')
+            })
+            $('#animation').on('click', function () {
+                $('.box').animate({
+                    left: '830px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                })
+            })
+        })
+
+        let count = 0; // Start from 0 to select the first image
+        let images = document.querySelectorAll('.slider-images');
+        let slider = document.querySelector('.slider');
+
+        setInterval(() => {
+            if (count >= images.length) {
+                count = 0;
+            }
+
+            images.forEach((img, index) => {
+                if (index !== count) {
+                    img.style.transform = 'translateX(100%)'; // Move images outside the view
+                } else {
+                    img.style.transform = 'translateX(0%)'; // Bring the current image into view
+                }
+            });
+
+            count++;
+        }, 2000);
+
+    </script>
+</body>
+
+</html>
